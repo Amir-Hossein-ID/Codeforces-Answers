@@ -9,22 +9,10 @@ t = int(input())
 
 for i in range(t):
     n, m = maput()
-    s = input()
-    ind = list(maput())
+    s = list(input())
+    ind = sorted(list(set(maput())))
     c = sorted(input())
-    ind.sort()
 
-    beg = 0
-    ans = ''
-    lastind = 0
-    for i in ind:
-        if i != lastind+1:
-            ans += s[lastind:i-1]
-        if i == lastind:
-            continue
-        ans += c[beg]
-        beg += 1
-        lastind = i
-    if lastind != n:
-        ans += s[lastind:]
-    print(ans+'\n')
+    for i,j in enumerate(ind):
+        s[j-1] = c[i]
+    print(''.join(s)+'\n')

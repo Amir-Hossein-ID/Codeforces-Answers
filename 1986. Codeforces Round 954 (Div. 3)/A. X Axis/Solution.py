@@ -8,8 +8,5 @@ print = sys.stdout.write
 t = int(input())
 
 for i in range(t):
-    a = list(maput())
-    min_ = float('inf')
-    for i in range(11):
-        min_ = min(min_, sum(abs(j-i) for j in a))
-    printf(min_)
+    a = sorted(maput())
+    printf(abs(a[0] - a[1]) + abs(a[2] - a[1]))
