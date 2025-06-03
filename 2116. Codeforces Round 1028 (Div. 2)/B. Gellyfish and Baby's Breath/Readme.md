@@ -1,0 +1,1 @@
+Challenge available [HERE](https://codeforces.com/contest/2116/problem/B)
